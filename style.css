@@ -44,7 +44,6 @@ header nav ul {
 }
 
 header nav ul li {
-  padding: 15px 25px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,6 +69,7 @@ header nav ul li:hover a {
 }
 
 header nav ul li a {
+  padding: 15px 25px;
   color: #fff;
   text-decoration: none;
 }
