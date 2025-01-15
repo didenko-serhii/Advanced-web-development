@@ -5,36 +5,33 @@
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <style>
-      body {
-        background-color: #333;
-        color: #fff;
-      }
-
-      header {
-        display: flex;
-        flex-direction: column;
-      }
-
-      @media screen and (max-width: 600px) {
-        body {
-          background-color: #fff;
-          color: #333;
-        }
-      }
-    </style>
+    <title>spa</title>
+    <link
+      rel="stylesheet"
+      href="style.css" />
   </head>
   <body>
     <header>
-      <h1>hello, world!</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores,
-        magnam ipsa!
-      </p>
+      <div id="wrapper">
+        <nav>
+          <ul>
+            <li><a href="#">item 1</a></li>
+            <li><a href="#">item 2</a></li>
+            <li><a href="#">item 3</a></li>
+            <li><a href="#">item 4</a></li>
+            <li><a href="#">item 5</a></li>
+            <li>
+              <a href="#"><img
+                width="25"
+                src="icon.png"
+                alt="" />
+            </li></a>
+          </ul>
+        </nav>
+      </div>
     </header>
-    <footer>
-      <p>created by Serhii</p>
-    </footer>
+    <script
+      defer
+      src="main.js"></script>
   </body>
 </html>
