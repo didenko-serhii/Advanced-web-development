@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>spa</title>
+    <style>
+      * {
+        user-select: none;
+        transition: all.2s ease;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      h1 {
+        font-size: 48px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+
+      .theme {
+        transition: all.2s ease;
+        color: #fff;
+        background-color: #000;
+      }
+
+      .wrapper {
+        width: 1280px;
+        margin: 0 auto;
+      }
+
+      .nav-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      header nav {
+        z-index: 10;
+        position: fixed;
+      }
+
+      header nav ul {
+        box-shadow: 2px 2px 15px 1px #333;
+        margin: 15px 0;
+        border-radius: 25px;
+        background-color: black;
+        list-style-type: none;
+        display: flex;
+      }
+
+      header nav ul li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3em;
+      }
+
+      header nav ul li:hover {
+        background-color: azure;
+      }
+
+      header nav ul li:first-child:hover {
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+      }
+
+      header nav ul li:last-child:hover {
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+      }
+
+      header nav ul li:hover a {
+        color: #333;
+      }
+
+      header nav ul li a {
+        padding: 15px 25px;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      section {
+        width: 100%;
+        height: 100vh;
+      }
+
+      section .wrapper #hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      #secondItem {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #b4b1b1;
+      }
+
+      #thirdItem {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        background: url('bcg.jpg');
+        position: relative;
+        z-index: 0;
+      }
+
+      #thirdItem .blur:hover::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('bcg.jpg');
+        filter: blur(30px);
+        z-index: -1;
+      }
+
+      #fourthdItem {
+        display: flex;
+      }
+
+      #fourthdItem .text-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 100vh;
+        padding: 0 50px;
+        background-color: sandybrown;
+      }
+
+      #fourthdItem .img-block {
+        width: 50%;
+        height: 100vh;
+        background: url('https://media.sproutsocial.com/uploads/3a_facebook-cover-photo_labels@2x-1.png');
+      }
+
+      @media screen and (max-width: 768px) {
+        .wrapper {
+          width: 100%;
+          min-height: auto;
+        }
+
+        h1 {
+          font-size: 28px;
+        }
+
+        header nav ul li {
+          font-size: 1em;
+        }
+
+        header nav ul li a {
+          padding: 10px 15px;
+          color: #fff;
+          text-decoration: none;
+        }
+
+        section .wrapper #hero h1,
+        p {
+          text-align: center;
+        }
+
+        #hero-img {
+          display: none;
+        }
+
+        #firstItem {
+          padding: 10px 15px;
+        }
+
+        #secondItem {
+          padding: 10px 15px;
+          height: auto;
+        }
+
+        #thirdItem {
+          padding: 10px 15px;
+          height: auto;
+        }
+
+        #fourthdItem {
+          display: flex;
+          flex-direction: column;
+        }
+
+        #fourthdItem .text-block {
+          width: 100%;
+          min-height: 100vh;
+        }
+
+        #fourthdItem .img-block {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <div class="nav-container">
+          <nav>
+            <ul>
+              <li><a href="#firstItem">item 1</a></li>
+              <li><a href="#secondItem">item 2</a></li>
+              <li><a href="#thirdItem">item 3</a></li>
+              <li><a href="#fourthdItem">item 4</a></li>
+              <li id="themer">
+                <a href="#"
+                  ><img
+                    width="25"
+                    src="icon.png"
+                    alt=""
+                /></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section id="firstItem">
+      <div class="wrapper">
+        <div id="hero">
+          <div id="hero-text">
+            <h1>Lorem, ipsum dolor!</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Laudantium, modi consequuntur?
+            </p>
+          </div>
+          <div id="hero-img">
+            <img
+              width="500"
+              src="hero.png"
+              alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="secondItem">
+      <div class="wrapper">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+          corporis inventore quia assumenda perferendis earum quis quod? Et
+          magnam voluptas doloribus quod nemo aut illum, iusto facilis, ad
+          placeat rerum voluptates dolorum similique incidunt aspernatur
+          mollitia non possimus in assumenda consectetur ducimus asperiores
+          debitis delectus quia? Illum ducimus iste laborum tenetur alias,
+          debitis eos sapiente blanditiis soluta libero, quia numquam. Numquam
+          voluptatum nulla architecto expedita nobis quod nostrum nihil
+          voluptatibus optio doloribus veniam, ducimus corrupti inventore
+          cupiditate aut quaerat, in rerum necessitatibus nisi. Quisquam nulla
+          et dolores necessitatibus, aperiam nihil cumque voluptate debitis
+          blanditiis perspiciatis quia obcaecati porro molestiae, error sint
+          sit. Quis, autem id amet voluptates doloremque animi a consequatur qui
+          atque doloribus nobis eius, expedita minus facilis optio quia ullam
+          accusantium quasi dolor dolorem eveniet quisquam at? Quam, eum.
+          Placeat nulla eos aliquid autem suscipit, explicabo earum omnis
+          nostrum. Molestiae explicabo animi reiciendis repellat! Tempora,
+          impedit sapiente reprehenderit accusantium delectus beatae blanditiis
+          voluptate? Maiores vitae illum nostrum hic praesentium magnam.
+          Eligendi perferendis corrupti aut in libero dolores laudantium quidem,
+          delectus eos dolore dolor eaque, repellendus iste error similique
+          commodi at sint illo ullam. Expedita, enim voluptatem sint id possimus
+          saepe? Architecto, libero aut impedit veniam quaerat totam nulla
+          eveniet nemo atque sed tenetur adipisci eos minima ipsum est vel ut
+          magnam, ex fugit quod nihil ad? Expedita iure sunt officiis ipsum? Quo
+          pariatur, commodi magni eaque sit similique repellat ducimus explicabo
+          fuga, ab veniam ipsum ipsa nulla dolore necessitatibus, enim nobis
+          eveniet mollitia neque distinctio animi expedita quis? Provident
+          debitis beatae, a, autem repellendus impedit laboriosam nemo similique
+          est, error et quidem totam? Sequi neque id non animi, quas quis
+          blanditiis sapiente modi voluptas quidem cum vitae, architecto minima
+          doloremque accusantium. Libero id necessitatibus, fugit vero eos et
+          laborum eum eaque maxime aliquid sunt ex? Sapiente, quibusdam ipsam.
+        </p>
+      </div>
+    </section>
+    <section id="thirdItem">
+      <div class="wrapper blur">
+        <h1>Lorem ipsum dolor sit amet consectetur adipisicing.</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat cum
+          earum, distinctio deserunt quia sapiente labore voluptate incidunt
+          quidem corrupti ut repellat blanditiis debitis tenetur qui, nam nihil
+          quod repudiandae, cumque ipsa voluptatum eius soluta ducimus? Iste
+          beatae architecto reiciendis pariatur totam dolorem ducimus, optio
+          dolor, eveniet nesciunt sed. Ut velit excepturi aliquid unde nobis
+          molestiae quia recusandae blanditiis, voluptate perspiciatis hic
+          accusamus dolore libero harum, eaque dolorem eum iusto laudantium non.
+          Aperiam assumenda autem architecto, inventore voluptatibus rem
+          molestias, enim quod quo, provident ullam nemo rerum nam quasi dicta.
+          Earum voluptate assumenda maiores aperiam fuga architecto temporibus
+          nostrum vero, tenetur cum inventore pariatur, eius provident, amet
+          nulla nemo. Consequuntur numquam dolorem provident, perferendis,
+          impedit tempore quisquam, cum accusantium aliquam ratione magni at
+          cupiditate! Magni quaerat fugit itaque nesciunt laboriosam. Mollitia
+          ad recusandae ex voluptatibus asperiores est officia officiis et sint
+          voluptas optio, eaque voluptatem necessitatibus veniam enim
+          blanditiis, repellat, molestiae distinctio saepe! Ullam quos natus
+          commodi unde. Mollitia, tenetur numquam dicta libero ut voluptatum
+          odio impedit a doloribus blanditiis minus quos quisquam dolor! Magnam
+          id maxime earum ducimus sequi nostrum? Magnam doloremque perspiciatis
+          corrupti distinctio! Beatae id, in aspernatur necessitatibus quia
+          dolorem adipisci eaque eius quisquam consequuntur blanditiis, officiis
+          natus nisi maxime cupiditate reprehenderit asperiores omnis optio
+          debitis perspiciatis? Optio distinctio officiis dolore, illum eius
+          molestiae eaque, quam libero repellendus animi pariatur similique esse
+          quod facilis? Dicta sint praesentium ullam, magni dolor placeat
+          ratione voluptatem commodi minus illum accusantium exercitationem
+          libero expedita labore, quaerat fuga at vel quo, non delectus nihil
+          quas sapiente totam suscipit! Debitis voluptate doloremque
+          voluptatibus hic reprehenderit nulla quisquam accusantium, dicta alias
+          molestiae aspernatur voluptates asperiores laudantium vitae magnam
+          mollitia ducimus quos quis provident? Nam aspernatur laboriosam
+          exercitationem cumque corporis laborum ullam, dolore ipsa earum!
+          Cupiditate, id. Cum dicta odio et rem consequatur obcaecati, voluptas
+          modi tenetur error repudiandae laborum molestias facilis illo nobis
+          distinctio expedita possimus! Enim molestiae vitae dolorum facilis
+          quae voluptatum sunt amet cumque a sed nihil, repellendus in ipsam
+          adipisci veritatis est laudantium eveniet accusantium quo dignissimos
+          maxime consectetur quas ab libero. Aliquid quos architecto
+          exercitationem fugiat odio sit! Sunt laborum, error vero sequi aliquam
+          architecto accusantium blanditiis libero aut! Perspiciatis consectetur
+          aspernatur iste nihil saepe laborum accusantium, enim porro obcaecati
+          perferendis assumenda temporibus, culpa nam veritatis soluta magnam
+          eaque, quos vel voluptate tempore voluptatum quo quibusdam tempora
+          deserunt? Placeat sunt ut non repellendus accusamus nisi impedit, aut
+          error voluptates veniam!
+        </p>
+      </div>
+    </section>
+    <section id="fourthdItem">
+      <div class="text-block">
+        <h1>Lorem ipsum dolor sit amet.</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+          itaque aliquam ullam ratione. Perferendis tenetur sapiente cupiditate
+          nihil harum id! Iure repudiandae cumque soluta natus doloremque
+          blanditiis dignissimos incidunt fugit obcaecati autem sint, molestias
+          nihil illum ea dolorem aperiam, sunt expedita exercitationem veniam!
+          Ipsam nihil dignissimos magnam nulla voluptatibus vero dolor
+          necessitatibus pariatur quidem maxime odio adipisci harum, commodi
+          facere voluptate laborum ullam sequi dolores blanditiis iure impedit
+          quo. In repellendus sequi porro non architecto delectus deserunt, eum,
+          adipisci esse molestias quis quod id repellat itaque officia minima
+          totam. Corporis minus, dolorem voluptatem animi molestiae cupiditate
+          blanditiis et qui id.
+        </p>
+      </div>
+      <div class="img-block"></div>
+    </section>
+    <script>
+      let btn = document.getElementById('themer')
+
+      btn.addEventListener('click', (e) => {
+        e.preventDefault()
+        let body = document.querySelector('body')
+
+        body.classList.toggle('theme')
+      })
+    </script>
+  </body>
+</html>
