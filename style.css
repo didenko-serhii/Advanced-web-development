@@ -104,7 +104,6 @@ section .wrapper #hero {
   align-items: center;
   color: #fff;
   background: url('bcg.jpg');
-
   position: relative;
   z-index: 0;
 }
@@ -140,4 +139,62 @@ section .wrapper #hero {
   width: 50%;
   height: 100vh;
   background: url('https://media.sproutsocial.com/uploads/3a_facebook-cover-photo_labels@2x-1.png');
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+    min-height: auto;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  header nav ul li {
+    font-size: 1em;
+  }
+
+  header nav ul li a {
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  section .wrapper #hero h1,
+  p {
+    text-align: center;
+  }
+
+  #hero-img {
+    display: none;
+  }
+
+  #firstItem {
+    padding: 10px 15px;
+  }
+
+  #secondItem {
+    padding: 10px 15px;
+    height: auto;
+  }
+
+  #thirdItem {
+    padding: 10px 15px;
+    height: auto;
+  }
+
+  #fourthdItem {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #fourthdItem .text-block {
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  #fourthdItem .img-block {
+    width: 100%;
+  }
 }
