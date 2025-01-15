@@ -92,3 +92,27 @@ section .wrapper #hero {
   align-items: center;
   background-color: #8b8b8b;
 }
+
+#thirdItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background: url('bcg.jpg');
+
+  position: relative;
+  z-index: 0;
+}
+
+#thirdItem .blur:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('bcg.jpg');
+
+  filter: blur(30px);
+  z-index: -1;
+}
