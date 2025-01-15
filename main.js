@@ -1,4 +1,4 @@
-let btn = document.getElementById('btn')
+let btn = document.getElementById('themer')
 
 btn.addEventListener('click', (e) => {
   e.preventDefault()

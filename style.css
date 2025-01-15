@@ -1,7 +1,22 @@
 * {
+  transition: background.2s ease;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+p {
+  font-size: 18px;
+}
+
+.theme {
+  transition: background.2s ease;
+  color: #fff;
+  background-color: #000;
 }
 
 .wrapper {
@@ -57,4 +72,23 @@ header nav ul li:hover a {
 header nav ul li a {
   color: #fff;
   text-decoration: none;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+}
+
+section .wrapper #hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#secondItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8b8b8b;
 }
